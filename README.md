@@ -24,6 +24,24 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 * Automatically crawl public VPN list and connect to public VPN.
 
 ---
+## Explaination
+* `main.py`
+    * The main program
+* `platform.py`
+    * Define the operating system platform
+    * There are 3 platform: Ubuntu Linux, Windows, MacOS
+* `web-crawler.py`
+    * Define the web crawler and update the public vpn list
+    * There is 1 resource (website): vpngate
+* `vpn-filter.py`
+    * Define the vpn filter and save as csv file
+    * There are 3 filter criteria: Country, Speed, Without filtering
+* `decode.py`
+    * Define the decoder and save as ovpn file (Converts Base64 to ASCII)
+* `connection.py`
+    * Connect to public vpn by using OpenVPN software
+
+---
 ## Installation（如何安裝）
 
 ### Requirements

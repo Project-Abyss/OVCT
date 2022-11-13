@@ -6,3 +6,4 @@ def load_table():
     Source = Source[['#HostName', 'CountryLong', 'IP', 'Speed', 'OpenVPN_ConfigData_Base64']]
     print(Source.head(10)) # List the first 10 rows of the PublicVPN list
     print('\n---------------------\n')
+    return Source

@@ -1,13 +1,16 @@
+import pandas
 import base64
 
-def vpn(vpn_hostname):
-
-    fliter = list_file['#HostName'] == vpn_hostname
-    VPN_data = list_file[(fliter)]
+def vpn(filtered_csv_path, vpn_hostname):
+    list_file = pandas.read_csv(filtered_csv_path)
+    filter = list_file['#HostName'] == vpn_hostname
+    #print("1.", filter)
+    VPN_data = list_file[(filter)]
+    #print("2.", VPN_data)
 
     base64_message = str(VPN_data['OpenVPN_ConfigData_Base64'].values)
     base64_bytes = base64_message.encode('ascii')
     message_bytes = base64.b64decode(base64_bytes)
-    ovpn_file_path = message_bytes.decode('ascii')
+    ovpn_file_content = message_bytes.decode('ascii')
 
-    return ovpn_file_path
+    return ovpn_file_content

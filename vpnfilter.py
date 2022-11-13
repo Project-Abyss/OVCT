@@ -1,3 +1,4 @@
+import pandas
 import csv
 
 def filter(result):
@@ -6,17 +7,20 @@ def filter(result):
     # Enter 1: country
     if selection == "1":
         result = filter_country(result)
-        Export(result)
+        filtered_csv_path = Export(result)
+        return filtered_csv_path
 
     # Enter 2: speed
     elif selection == "2":
         result = filter_speed(result)
-        Export(result)
+        filtered_csv_path = Export(result)
+        return filtered_csv_path
 
     # Enter 3: without filtering
     else:
         result = no_filter(result)
-        Export(result)
+        filtered_csv_path = Export(result)
+        return filtered_csv_path
         
 def filter_country(Source):
     Country_list = Source.filter(items=['CountryLong'])
@@ -49,8 +53,8 @@ def filter_speed(Source):
     Source = Source.query('Speed >= {}'.format(Speed))
     return Source
 
-def no_filter():
-    pass
+def no_filter(Source):
+    return Source
 
 def Export(Source):
     Path = input("Where would you like to save the CSV file (Please enter the absolute path and the \"file name\" (E.g. /home/user/Desktop/[choose a file_name]): \n\n=> ")
@@ -58,3 +62,4 @@ def Export(Source):
     Source.to_csv(Path, sep=',', index=False)
     print("\n[The result has outputted!]")
     print('\n---------------------\n')
+    return Path

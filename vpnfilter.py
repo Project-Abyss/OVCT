@@ -5,18 +5,18 @@ def filter(result):
 
     # Enter 1: country
     if selection == "1":
-        result = filter_country(Source)
-        Export(Source)
+        result = filter_country(result)
+        Export(result)
 
     # Enter 2: speed
     elif selection == "2":
-        result = filter_speed(Source)
-        Export(Source)
+        result = filter_speed(result)
+        Export(result)
 
     # Enter 3: without filtering
     else:
-        result = no_filter(Source)
-        Export(Source)
+        result = no_filter(result)
+        Export(result)
         
 def filter_country(Source):
     Country_list = Source.filter(items=['CountryLong'])

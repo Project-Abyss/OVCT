@@ -82,11 +82,23 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 ## Usage（如何使用）
 
 ### Ubuntu Linux
+* Choose a mode to save VPN list or use list provided.
+* Input OpenVPN software path.
+* Input a hostname to connect.
+<待補圖片>
 
 ### Windows
-
+* Choose a mode to save VPN list or use list provided.
+* Enter the OpenVPN software path.
+* Enter the hostname to get the ovpn file.
+* Click OpenVPN GUI icon and select the VPN data to connecting.
+<待補圖片>
 
 ### MacOS
+* Choose a mode to save VPN list or use list provided.
+* Enter the hostname to get the ovpn file.
+* Open the OpenVPN Connect APP and select the VPN data to connecting.
+<待補圖片>
 
 ---
 ## Resources

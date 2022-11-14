@@ -26,7 +26,7 @@ def ubuntu(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     L_path = os.path.join(openvpn_path, 'client', 'vpngate_{}_{}_{}.ovpn'.format(vpn_hostname, vpn_country, vpn_ip))
     L_path = re.sub("\[|\]|\'","",L_path)
     with open(L_path, mode="w") as file:
-        file.write(ovpn_file_path)
+        file.write(ovpn_file_content)
     os.system('sudo openvpn --config {}'.format(L_path))
 
 

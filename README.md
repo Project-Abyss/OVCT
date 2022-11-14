@@ -36,7 +36,7 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 * `vpnselection.py`
     * Define the vpn selection
 * `decode.py`
-    * Define the decoder and save as ovpn file (Converts Base64 to ASCII)
+    * Define the decoder and convert the ovpn file content from Base64 to ASCII
 * `connection.py`
     * Connect to public vpn by using OpenVPN software
     * It supports 3 operating systems: Ubuntu, Windows, MacOS
@@ -98,7 +98,9 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 * Choose a mode to save VPN list or use list provided.
 * Enter the hostname to get the ovpn file.
 * Open the OpenVPN Connect APP and select the VPN data to connecting.
-<待補圖片>
+
+  <img width="878" alt="截圖 2022-11-14 上午11 41 51" src="https://user-images.githubusercontent.com/42068007/201570853-6a549190-9030-4276-a66b-326fdade0853.png">
+  <img width="1318" alt="截圖 2022-11-14 上午11 43 41" src="https://user-images.githubusercontent.com/42068007/201570854-c5d62db3-ccb0-49b1-979b-d6bf522ac5d8.png">
 
 ---
 ## Resources

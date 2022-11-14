@@ -6,18 +6,21 @@ def filter(result):
 
     # Enter 1: country
     if selection == "1":
+        print('\n---------------------\n')
         result = filter_country(result)
         filtered_csv_path = Export(result)
         return filtered_csv_path
 
     # Enter 2: speed
     elif selection == "2":
+        print('\n---------------------\n')
         result = filter_speed(result)
         filtered_csv_path = Export(result)
         return filtered_csv_path
 
     # Enter 3: without filtering
     else:
+        print('\n---------------------\n')
         result = no_filter(result)
         filtered_csv_path = Export(result)
         return filtered_csv_path

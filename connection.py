@@ -23,10 +23,11 @@ def ubuntu(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
         openvpn_path = input("Please input your openVPN software file path. (E.g. /etc/openvpn): \n\n=> ")
     print('\n---------------------\n')
 
-    W_path = os.path.join(openvpn_path, 'config', 'vpngate_{}_{}_{}.ovpn'.format(vpn_hostname, vpn_country, vpn_ip))
-    with open(W_path, mode="w") as file:
-        file.write(ovpn_file_content)
-    print("\n[ The \"vpngate_{}_{}_{}.ovpn\"".format(vpn_hostname, vpn_country, vpn_ip), "file import complete! ]")
+    L_path = os.path.join(openvpn_path, 'client', 'vpngate_{}_{}_{}.ovpn'.format(vpn_hostname, vpn_country, vpn_ip))
+    L_path = re.sub("\[|\]|\'","",L_path)
+    with open(L_path, mode="w") as file:
+        file.write(ovpn_file_path)
+    os.system('sudo openvpn --config {}'.format(L_path))
 
 
 def macos(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):

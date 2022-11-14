@@ -1,0 +1,3 @@
+package    version
+--------   ----------
+pandas     1.5.1

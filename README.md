@@ -11,11 +11,10 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 [黃子軒 Tzu-Hsuan Huang](https://github.com/Nima-Huang)@[Abyss-TeamA](https://github.com/Abyss-TeamA) (Author/Maintainer)<br />
 
 ---
-## Introduction（專案概述）
-製作一個使用 Python 撰寫的「 Public VPN Connection Tool 」。
+## Introduction
+***Public VPN Connection Tool*** is a tool built with Python web crawling technique.
 
-透過 Python 爬蟲方法，從 VPN Gate 網站 爬取符合 OpenVPN protocol 的 public VPN 清單後，提供甲方選擇並驅動 OpenVPN 軟體協助掛載。
-
+After collecting the public VPN list conforming to the OpenVPN protocol from the vpngate website, it allows user to select specific VPN ISP hostname and drive the OpenVPN software to assist in connection.
 
 ---
 ## Features
@@ -42,7 +41,7 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
     * It supports 3 operating systems: Ubuntu, Windows, MacOS
 
 ---
-## Installation（如何安裝）
+## Installation
 
 ### Requirements
 * Python 3.x
@@ -79,7 +78,7 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
    ```
 
 ---
-## Usage（如何使用）
+## Usage
 
 ### Ubuntu Linux
 * Choose a mode to save VPN list or use list provided.

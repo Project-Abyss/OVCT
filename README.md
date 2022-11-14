@@ -84,7 +84,8 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Choose a mode to save VPN list or use list provided.
 * Input OpenVPN software path.
 * Input a hostname to connect.
-<待補圖片>
+   ![image](https://user-images.githubusercontent.com/87530200/201676396-641caed1-de21-44b8-b0ba-320238fa072f.png)
+
 
 ### Windows
 * Choose a mode to save VPN list or use list provided.

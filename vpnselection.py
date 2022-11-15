@@ -4,7 +4,7 @@ import csv
 def select_one(filtered_csv_path):
 
     list_file = pandas.read_csv(filtered_csv_path)
-    print(list_file)
+    print(list_file[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10))
 
     vpn_hostname = input("Please input VPN ISP hostname: \n\n=> ")
 

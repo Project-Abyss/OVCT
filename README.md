@@ -93,7 +93,7 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Enter the hostname to get the ovpn file.
 * Click OpenVPN GUI icon and select the VPN data to connecting.
    ![image](https://user-images.githubusercontent.com/87530200/201847416-f0a45eee-2bc7-4743-b38c-53de03c388e0.png)
-
+   file:///C:/Users/hwang/Downloads/%E8%B3%87%E8%A8%8A%E6%90%9C%E5%B0%8B%E8%88%87%E4%BD%BF%E7%94%A8%E8%A1%8C%E7%82%BA_%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A.svg
 
 ### MacOS
 * Choose a mode to save VPN list or use list provided.

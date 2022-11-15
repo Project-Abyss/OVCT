@@ -85,15 +85,15 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 ## Usage
 
 ### Ubuntu Linux
-* Choose a mode to save VPN list or use list provided.
-* Input OpenVPN software path.(Default: /etc/openvpn)
-* Input a hostname to connect.
+* Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)
+* Enter OpenVPN software path (Default: `/etc/openvpn`) and ovpn file will save to `/etc/openvpn/client`.
+* Enter a hostname to connect.
    ![image](https://user-images.githubusercontent.com/87530200/201676396-641caed1-de21-44b8-b0ba-320238fa072f.png)
 
 
 ### Windows
-* Choose a mode to save VPN list or use list provided.
-* Enter the OpenVPN software path.
+* Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)
+* Enter the OpenVPN software path (Default: `C:\Users\[user_name]\OpenVPN`) and ovpn file will save to `C:\Users\[user_name]\OpenVPN\config`.
 * Enter the hostname to get the ovpn file.
 * Click OpenVPN GUI icon and select the VPN data to connecting.
    ![image](https://user-images.githubusercontent.com/87530200/201847416-f0a45eee-2bc7-4743-b38c-53de03c388e0.png)
@@ -101,10 +101,10 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 
 
 ### MacOS
-* Choose a mode to save VPN list or use list provided.
+* Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)
+* Enter the OpenVPN software path. (Default: `/Applications/OpenVPN Connect/OpenVPN Connect.app/Contents/MacOS/OpenVPN Connect`)
 * Enter the hostname to get the ovpn file.
 * Open the OpenVPN Connect APP and select the VPN data to connecting.
-
   <img width="878" alt="截圖 2022-11-14 上午11 41 51" src="https://user-images.githubusercontent.com/42068007/201570853-6a549190-9030-4276-a66b-326fdade0853.png">
   <img width="1318" alt="截圖 2022-11-14 上午11 43 41" src="https://user-images.githubusercontent.com/42068007/201570854-c5d62db3-ccb0-49b1-979b-d6bf522ac5d8.png">
 

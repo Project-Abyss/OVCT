@@ -86,7 +86,7 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 
 ### Ubuntu Linux
 * Choose a mode to save VPN list or use list provided.
-* Input OpenVPN software path.
+* Input OpenVPN software path.(Default: /etc/openvpn)
 * Input a hostname to connect.
    ![image](https://user-images.githubusercontent.com/87530200/201676396-641caed1-de21-44b8-b0ba-320238fa072f.png)
 

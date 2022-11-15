@@ -1,4 +1,4 @@
-# Public-VPN-Connection-Tool
+# OVCT (Public VPN Connection Tool)
 
 #### GitHub
 
@@ -12,7 +12,7 @@ https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
 
 ---
 ## Introduction
-***Public VPN Connection Tool*** is a tool built with Python web crawling technique.
+***OVCT*** is a tool built with Python web crawling technique.
 
 After collecting the public VPN list conforming to the OpenVPN protocol from the vpngate website, it allows user to select specific VPN ISP hostname and drive the OpenVPN software to assist in connection.
 

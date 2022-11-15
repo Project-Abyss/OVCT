@@ -2,7 +2,7 @@
 
 #### GitHub
 
-https://github.com/Abyss-TeamA/Public-VPN-Connection-Tool
+https://github.com/Project-Abyss/OVCT
 
 #### Author / Maintainers
 

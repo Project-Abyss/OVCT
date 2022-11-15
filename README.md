@@ -23,6 +23,10 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Automatically crawl public VPN list and connect to public VPN.
 
 ---
+## System Structure
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/42068007/201866503-eb13d07e-dfbf-4269-8e1b-8d2a53fa7ea5.png">
+
+---
 ## Explanation
 * `main.py`
     * The main program

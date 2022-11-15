@@ -10,6 +10,6 @@ def load_table():
     else:
         Source = pandas.read_csv("PublicVPN_List.csv")
 
-    print(Source.head(10)) # List the first 10 rows of the PublicVPN list
+    print(Source[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10)) # List the first 10 rows of the PublicVPN list
     print('\n---------------------\n')
     return Source

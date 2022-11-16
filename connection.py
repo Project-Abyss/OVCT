@@ -9,7 +9,6 @@ def ubuntu(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     VPN_data = list_file[(fliter)]
     IP = str(VPN_data['IP'].values)
     Country = str(VPN_data['CountryLong'].values)
-
     characters = "'[] "
     for x in range(len(characters)):
         Country = Country.replace(characters[x],"")
@@ -38,7 +37,6 @@ def macos(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     VPN_data = list_file[(fliter)]
     IP = str(VPN_data['IP'].values)
     Country = str(VPN_data['CountryLong'].values)
-
     characters = "'[] "
     for x in range(len(chaacters)):
         Country = Country.replace(characters[x],"")
@@ -48,7 +46,7 @@ def macos(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     with open(ovpn_file_path, mode="w") as file:
         file.write(ovpn_file_content)
     os.system("/Applications/OpenVPN\ Connect/OpenVPN\ Connect.app/Contents/MacOS/OpenVPN\ Connect --import-profile={}".format(ovpn_file_path))
-    print("\n## The vpngate_{}_{}_{}.ovpn file imported successfully. ##\n\n## You can connect with OpenVPN. ##".format(vpn_hostname, vpn_country, vpn_ip)) 
+    print("\n## The vpngate_{}_{}_{}.ovpn file imported successfully. \n\n## You can connect with OpenVPN.".format(vpn_hostname, vpn_country, vpn_ip)) 
  
 
 def windows(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
@@ -58,7 +56,6 @@ def windows(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     VPN_data = list_file[(fliter)]
     IP = str(VPN_data['IP'].values)
     Country = str(VPN_data['CountryLong'].values)
-
     characters = "'[] "
     for x in range(len(chaacters)):
         Country = Country.replace(characters[x],"")
@@ -75,4 +72,4 @@ def windows(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     W_path = os.path.join(openvpn_path, 'config', 'vpngate_{}_{}_{}.ovpn'.format(vpn_hostname, vpn_country, vpn_ip))
     with open(W_path, mode="w") as file:
         file.write(ovpn_file_content)
-    print("## The \"vpngate_{}_{}_{}.ovpn\"".format(vpn_hostname, vpn_country, vpn_ip), "file import complete! ##\n\n## You can connect with OpenVPN. ##\n\n")
+    print("## The \"vpngate_{}_{}_{}.ovpn\"".format(vpn_hostname, vpn_country, vpn_ip), "file import complete! \n\n## You can connect with OpenVPN. \n\n")

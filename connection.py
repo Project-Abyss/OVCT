@@ -48,7 +48,7 @@ def macos(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     with open(ovpn_file_path, mode="w") as file:
         file.write(ovpn_file_content)
     os.system("/Applications/OpenVPN\ Connect/OpenVPN\ Connect.app/Contents/MacOS/OpenVPN\ Connect --import-profile={}".format(ovpn_file_path))
-    print("\n=> The vpngate_{}_{}_{}.ovpn file imported successfully.\n\n".format(vpn_hostname, vpn_country, vpn_ip)) 
+    print("\n=> The vpngate_{}_{}_{}.ovpn file imported successfully.\n\n=> You can connect with OpenVPN.".format(vpn_hostname, vpn_country, vpn_ip)) 
  
 
 def windows(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
@@ -75,4 +75,4 @@ def windows(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     W_path = os.path.join(openvpn_path, 'config', 'vpngate_{}_{}_{}.ovpn'.format(vpn_hostname, vpn_country, vpn_ip))
     with open(W_path, mode="w") as file:
         file.write(ovpn_file_content)
-    print("=> The \"vpngate_{}_{}_{}.ovpn\"".format(vpn_hostname, vpn_country, vpn_ip), "file import complete! \n\n")
+    print("=> The \"vpngate_{}_{}_{}.ovpn\"".format(vpn_hostname, vpn_country, vpn_ip), "file import complete! \n\n=> You can connect with OpenVPN.")

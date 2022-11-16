@@ -88,8 +88,11 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)
 * Enter OpenVPN software path (Default: `/etc/openvpn`) and ovpn file will save to `/etc/openvpn/client`.
 * Enter a hostname to connect.
-   ![image](https://user-images.githubusercontent.com/87530200/202102245-0b08fe4e-2704-41de-b0a3-b35510d31571.png=%)
 
+   <img src="https://user-images.githubusercontent.com/87530200/202104067-d7d1a5fe-a5f3-40fd-ab79-bc5e1e8b07e2.JPG" width=50% height=50% alt="Linux1"/>
+   <img src="https://user-images.githubusercontent.com/87530200/202104895-8a796a37-f1ad-4ea2-881c-621db3bfbb2e.png" width=50% height=50% alt="Linux2"/>
+   <img src="https://user-images.githubusercontent.com/87530200/202105213-ad18644b-7409-456c-8baa-4ddda9f57ae5.png" width=50% height=50% alt="Linux3"/>
+   <img src="https://user-images.githubusercontent.com/87530200/202111058-dc96507d-d9e2-4e90-8fa5-e8d9c05894b8.png" width=50% height=50% alt="Linux4"/>
 
 ### Windows
 * Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)

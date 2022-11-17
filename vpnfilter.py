@@ -2,6 +2,7 @@ import pandas
 import csv
 
 def filter(result):
+    print('\n-----------------------------------\n')
     selection = input("【 Please enter the number for selecting one of the criteria to filter. 】\n\n1. Country \n2. Speed \n3. Without filtering (default) \n\n=> ")
 
     # Enter 1: country

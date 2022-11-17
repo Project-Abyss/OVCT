@@ -88,6 +88,15 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)
 * Enter OpenVPN software path (Default: `/etc/openvpn`) and ovpn file will save to `/etc/openvpn/client`.
 * Enter a hostname to connect.
+<new>
+* Choose a function to update VPN list , filtered the list or connection.
+* Update public VPN list:
+   * you can save new public VPN list.
+* Filter the list:
+   * choose a mode to filtering list and save it.
+* Connection:
+   * enter the OpenVPN software path (Default: `/etc/openvpn`) and ovpn file will save to `/etc/openvpn/client`.
+   * choose a list then enter the hostname, and you will get a ovpn file & connecting.
 
    <img src="https://user-images.githubusercontent.com/87530200/202104067-d7d1a5fe-a5f3-40fd-ab79-bc5e1e8b07e2.JPG" width=50% height=50% alt="Linux1"/>
    <img src="https://user-images.githubusercontent.com/87530200/202104895-8a796a37-f1ad-4ea2-881c-621db3bfbb2e.png" width=50% height=50% alt="Linux2"/>
@@ -100,6 +109,16 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 * Enter the OpenVPN software path (Default: `C:\Users\[user_name]\OpenVPN`) and ovpn file will save to `C:\Users\[user_name]\OpenVPN\config`.
 * Enter the hostname to get the ovpn file.
 * Click OpenVPN GUI icon and select the VPN data to connecting.
+<new>
+* Choose a function to update VPN list , filtered the list or connection.
+* Update public VPN list:
+   * you can save new public VPN list.
+* Filter the list:
+   * choose a mode to filtering list and save it.
+* Connection:
+   * enter the OpenVPN software path (Default: `C:\Users\[user_name]\OpenVPN`) and ovpn file will save to `C:\Users\[user_name]\OpenVPN\config`.
+   * choose a list then enter the hostname, and you will get a ovpn file.
+
 
 ### MacOS
 * Choose a mode to save VPN list or use list provided. (Default: csv file save to current path.)

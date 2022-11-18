@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print(result[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10)) # List the first 10 rows of the PublicVPN list
         print('\n======================================================================\n')
 
-        function_chioce = input("Choose a Function: \n\n 1. Update publicVPN list.\n 2. filter the publicVPN list.\n 3. Connection. \n 0. Exit\n\n=> ")
+        function_chioce = input("Choose a Function: \n\n 1. Update the public VPN list \n 2. Filter the public VPN list \n 3. Connection \n 0. Exit\n\n=> ")
         
         if function_chioce == '1':
             result = webcrawler.load_table()

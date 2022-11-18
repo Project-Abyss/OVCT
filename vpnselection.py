@@ -4,7 +4,7 @@ import csv
 def select_one(filtered_csv_path):
 
     list_file = pandas.read_csv(filtered_csv_path)
-    print('-----------------------------------\n\n【 Public VPN 10 filtered records 】\n')
+    print('\n-----------------------------------\n\n【 Public VPN 10 filtered records 】\n')
     print(list_file[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10))
 
     print('\n-----------------------------------\n')

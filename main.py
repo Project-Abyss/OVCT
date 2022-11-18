@@ -22,6 +22,7 @@ if __name__ == "__main__":
         
         if function_chioce == '1':
             result = webcrawler.load_table()
+            vpnfilter.Export(result)
 
         elif function_chioce == '2':
             filtered_csv_path = vpnfilter.filter(result)

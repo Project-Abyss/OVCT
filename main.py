@@ -36,7 +36,7 @@ if __name__ == "__main__":
                 print("[Sorry, this path information is necessary, please input again.]")
                 print('\n-----------------------------------\n')
                 filtered_csv_path = input("【 Please enter your VPN list path: 】\n\n=> ")
-                
+
             vpn_hostname, vpn_ip, vpn_country = vpnselection.select_one(filtered_csv_path)
             ovpn_file_content = decode.vpn(filtered_csv_path, vpn_hostname)
 

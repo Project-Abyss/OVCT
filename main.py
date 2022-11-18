@@ -25,6 +25,8 @@ if __name__ == "__main__":
             vpnfilter.Export(result)
 
         elif function_chioce == '2':
+            filtered_csv_path = input("【 Please enter your VPN list path: (e.g. [VPN_list_path]/[file_name].csv) 】\n\n=> ")
+            result = pandas.read_csv(filtered_csv_path)
             filtered_csv_path = vpnfilter.filter(result)
             result = pandas.read_csv(filtered_csv_path)
             #result = result[['#HostName', 'CountryLong', 'IP', 'Speed', 'OpenVPN_ConfigData_Base64']]

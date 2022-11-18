@@ -34,12 +34,14 @@ def filter_country(Source):
     while(True):
         print('\n-----------------------------------\n')
         print('There are some countries you can choose: \n')
-        print((str(list(Country_Set)).replace(',','\n')))
+        for c in Country_Set:
+            print(c.replace(',', ''))
         Input_Country = input("\n\n【 Please enter the country 】 \n\n=> ")
-        if(Input_Country in Country_Set):
+        if (Input_Country in Country_Set):
             break
         else:
             print('\n[Your input is not in the list, please enter it again.]')
+
     Source = Source[Source.CountryLong.eq(Input_Country)]
     return Source
 
@@ -63,5 +65,5 @@ def Export(Source):
     # columns = ['HostName', 'Country', 'IP', 'Speed (Mbps)', 'OpenVPN_ConfigData_Base64']
     # source_CSV = Source.reindex(columns=columns)
     Source.to_csv(Path, sep=',', index=False)
-    print("\n[The result has outputted!]\n")
+    print("\n[ The result has outputted ! ]\n")
     return Path

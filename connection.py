@@ -15,8 +15,8 @@ def ubuntu(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):
     L_path = re.sub("\[|\]|\'","",L_path)
     with open(L_path, mode="w") as file:
         file.write(ovpn_file_content)
+    print("\n===== ## Now, the public VPN (Country: {}, Hostname: {}, IP: {}) is connecting. ===== \n\n".format(vpn_country, vpn_hostname, vpn_ip))
     os.system('sudo openvpn --config {}'.format(L_path))
-    print("\n===== ## Now, the public VPN (Country: {}, Hostname: {}, IP: {}) is connecting successfully ! ===== \n\n".format(vpn_country, vpn_hostname, vpn_ip))
 
 
 def macos(ovpn_file_content, vpn_hostname, vpn_ip, vpn_country):

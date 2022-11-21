@@ -24,7 +24,7 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 
 ---
 ## System Structure
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/42068007/201866503-eb13d07e-dfbf-4269-8e1b-8d2a53fa7ea5.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/42068007/203088995-583d5b55-5b0c-49c7-ae34-c4ebbc28f763.png">
 
 ---
 ## Explanation
@@ -83,6 +83,9 @@ After collecting the public VPN list conforming to the OpenVPN protocol from the
 
 ---
 ## Usage
+```
+$ python3 main.py
+```
 
 ### Ubuntu Linux
 * Select the function to update VPN lists, filter lists, or connections.  

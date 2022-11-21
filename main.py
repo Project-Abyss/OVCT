@@ -1,16 +1,12 @@
+from functions import webcrawler, vpnfilter, vpnselection, decode, connection
 import platform
 import pandas
 import os
 import sys
-import webcrawler
-import vpnfilter
-import vpnselection
-import decode
-import connection
 
 if __name__ == "__main__":
 
-    result = pandas.read_csv("PublicVPN_List.csv")
+    result = pandas.read_csv("./resources/PublicVPN_List.csv")
 
     while(True):
     

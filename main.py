@@ -1,11 +1,15 @@
-from functions import webcrawler, vpnfilter, vpnselection, decode, connection
+#from functions import webcrawler, vpnfilter, vpnselection, decode, connection
 import platform
 import pandas
 import os
 import sys
 
-if __name__ == "__main__":
+import set_init
+set_init.init_file_name()
+from functions import *
 
+if __name__ == "__main__":
+    set_init.init_file_name()
     result = pandas.read_csv("./resources/all_resources.csv")
 
     while(True):

@@ -33,7 +33,7 @@ if __name__ == "__main__":
             filter_name = input("【 Please enter the VPN list name 】\n\n=> ")
             filtered_csv_path = "./resources/" + file_name + ".csv"           
             while (filtered_csv_path.strip() == '') or (os.path.exists(filtered_csv_path) == False):
-                print("[Sorry, this path information is necessary, please input again.]")
+                print("\n[Sorry, this path information is necessary, please input again.]")
                 print('\n-----------------------------------\n')
                 filter_name = input("【 Please enter the VPN list name 】\n\n=> ")
                 filtered_csv_path = "./resources/" + file_name + ".csv"

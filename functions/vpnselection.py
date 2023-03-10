@@ -1,17 +1,19 @@
 import pandas 
 import csv
 
-def select_one(filtered_csv_path):
-
+def select_one(filtered_csv_path, show_list):
     list_file = pandas.read_csv(filtered_csv_path)
-    print('\n-----------------------------------\n\n【 Public VPN 10 filtered records 】\n')
-    print(list_file[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10))
-
-    print('\n-----------------------------------\n')
+    if show_list == "y":
+        print('\n-----------------------------------\n\n【 Public VPN 10 filtered records 】\n')
+        print(list_file[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10))
+        print('\n-----------------------------------\n')
+    else:
+        pass
+        
     vpn_hostname = input("【 Please input VPN ISP hostname 】\n\n=> ")
 
     while(vpn_hostname not in list(list_file['#HostName'])):
-        print("\n[Sorry, this Hostname isn't in the PublicVPN_list.csv, please input again.]")
+        print("\n[Sorry, this Hostname isn't in the all_resources.csv, please input again.]")
         print('\n-----------------------------------\n')
         vpn_hostname = input("【 Please input VPN ISP hostname 】\n\n=> ")        
     

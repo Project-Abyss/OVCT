@@ -4,7 +4,7 @@ inifile_name = "./config.ini"
 inifile = cp.ConfigParser()
 inifile.read(inifile_name, 'UTF-8')
 
-from load_module import *
+from import_functions import *
 
 if __name__ == "__main__":
     loading()

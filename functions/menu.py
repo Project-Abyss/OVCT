@@ -1,6 +1,10 @@
-from functions import data_processing, vpnfilter, vpnselection, connection
 import os, sys
 import pandas as pd
+
+from functions import data_processing
+from functions.filter import vpnfilter
+from functions.connection import vpnselection, connection
+
 
 def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
     while(True):

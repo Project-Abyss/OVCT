@@ -22,7 +22,7 @@ def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
 
         elif function_chioce == '3':
             print('\n-----------------------------------\n')
-            print('You can enter the csv file of these...\n')
+            print('You can enter a csv file name of these...\n')
             for i in range(len(os.listdir(Folder_Path))):
                 if os.listdir(Folder_Path)[i].endswith(".csv"):
                     print(os.listdir(Folder_Path)[i].replace('.csv', ''))

@@ -1,8 +1,8 @@
 import pandas 
 import csv
 
-def select_one(filtered_csv_path, show_list):
-    list_file = pandas.read_csv(filtered_csv_path)
+def select_one(Source, show_list):
+    list_file = Source
     if show_list == "y":
         print('\n-----------------------------------\n\n【 Public VPN 10 filtered records 】\n')
         print(list_file[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10))

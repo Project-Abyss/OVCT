@@ -1,6 +1,7 @@
 import pandas
 import csv
-from functions import vpnselection, connection, data_processing
+from functions import data_processing
+from functions.connection import vpnselection, connection
 
 class choose_filter_way:
     def filter(All_Source_Path, Folder_Path):

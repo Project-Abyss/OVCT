@@ -4,7 +4,7 @@ from pathlib import Path
 def loading():
     functions_path = Path(__file__).resolve().parent / "functions"
     file_paths = functions_path.glob("**/*.py")
-    file_paths = [path for path in file_paths if not str(path).startswith(str(function_path / "__pycache__"))]
+    file_paths = [path for path in file_paths if not str(path).startswith(str(functions_path / "__pycache__"))]
     for file_path in file_paths:
         if file_path.stem == "__init__":
             continue

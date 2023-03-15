@@ -1,5 +1,5 @@
 from functions import data_processing, vpnfilter, vpnselection, connection
-import os
+import os, sys
 import pandas as pd
 
 def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
@@ -18,6 +18,12 @@ def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
 
         elif function_chioce == '3':
             print('\n-----------------------------------\n')
+            print('You can enter the csv file of these...\n')
+            for i in range(len(os.listdir(Folder_Path))):
+                if os.listdir(Folder_Path)[i].endswith(".csv"):
+                    print(os.listdir(Folder_Path)[i].replace('.csv', ''))
+            print('\n-----------------------------------\n')
+            
             file_name = input("【 Please enter the VPN list name 】\n\n=> ")
             filtered_csv_path = Folder_Path + file_name + ".csv"
             while (filtered_csv_path.strip() == '') or (os.path.exists(filtered_csv_path) == False):

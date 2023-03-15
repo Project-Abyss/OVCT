@@ -1,4 +1,5 @@
-from functions import webcrawler, data_processing
+from functions import data_processing
+from functions.initialize import webcrawler
 
 def get_current_list(All_Source_Path):
     print("\n[ Initializing... ]")

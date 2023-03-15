@@ -1,4 +1,4 @@
-import pandas 
+import pandas as pd
 import csv
 
 def select_one(Source, show_list):

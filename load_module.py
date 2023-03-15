@@ -8,7 +8,7 @@ def loading():
     for file_path in file_paths:
         if file_path.stem == "__init__":
             continue
-        modile_name = file_path.stem
+        module_name = file_path.stem
         module_path = str(file_path.relative_to(functions_path)).replace("/", ".")[:-3]
         module_spec = importlib.util.spec_from_file_location(module_name, file_path)
         module = importlib.util.module_from_spec(module_spec)

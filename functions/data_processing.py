@@ -1,6 +1,6 @@
 import pandas as pd
 import csv, base64
-from functions import webcrawler
+from functions.initialize import webcrawler
 
 def list_reload(Updated_Source, All_Source_Path):
     Updated_Source.to_csv(All_Source_Path, sep=',', index=False)

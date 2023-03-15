@@ -1,16 +1,28 @@
 import os, sys
-
-import set_init
-set_init.init_file_name()
-from functions import *
-
 import configparser as cp
 inifile_name = "./config.ini"
 inifile = cp.ConfigParser()
 inifile.read(inifile_name, 'UTF-8')
 
-if __name__ == "__main__":
-    set_init.init_file_name()
+import importlib.util
+from pathlib import Path
 
+def loading():
+    functions_path = Path(__file__).resolve().parent / "functions"
+    file_paths = functions_path.glob("**/*.py")
+    file_paths = [path for path in file_paths if not str(path).startswith(str(function_path / "__pycache__"))]
+    for file_path in file_paths:
+        if file_path.stem == "__init__":
+            continue
+        modile_name = file_path.stem
+        module_path = str(file_path.relative_to(functions_path)).replace("/", ".")[:-3]
+        module_spec = importlib.util.module_from_spec(module_spec)
+        module_spec.loader.exec_module(module)
+        
+        globals()[module_name] = module
+
+if __name__ == "__main__":
+    loading()
+    
     Updated_Source = initialize.get_current_list(inifile["File_Path"]["all_resources"])
     menu.choose_operation(Updated_Source, inifile["File_Path"]["all_resources"], inifile["File_Path"]["resources"])

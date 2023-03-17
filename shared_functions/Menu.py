@@ -1,24 +1,26 @@
 import os, sys
 import pandas as pd
 
-from functions import data_processing
-from functions.filter import vpnfilter
-from functions.connection import vpnselection, connection
+from shared_functions import WebsiteFunction
 
 
-def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
+def chooseOperation(Folder_Path, File_Name, Website_Name):
     while(True):
+        file_path = Folder_Path + File_Name +'.csv'
+        source = pd.read_csv(file_path)
         print("\n======================================================================\n\n【 Public VPN 10 records 】\n")
-        print(Updated_Source[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10)) # List the first 10 rows of the PublicVPN list
+        print(source[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10)) # List the first 10 rows of the PublicVPN list
         print('\n======================================================================\n')
 
         function_chioce = input("Choose a Function: \n\n 1. Update the public VPN list \n 2. Filter the public VPN list \n 3. Connection \n 0. Exit\n\n=> ")
         
         if function_chioce == '1':
-            data_processing.append_new_list(All_Source_Path)
+            if Website_Name == 'vpngate':
+                WebsiteFunction.Vpngate.update(file_path)
 
         elif function_chioce == '2':
-            vpnfilter.choose_filter_way.filter(All_Source_Path, Folder_Path)
+            if Website_Name == 'vpngate':
+                WebsiteFunction.Vpngate.filter(Folder_Path, File_Name)
 
         elif function_chioce == '3':
             print('\n-----------------------------------\n')
@@ -28,18 +30,17 @@ def choose_operation(Updated_Source, All_Source_Path, Folder_Path):
                     print(os.listdir(Folder_Path)[i].replace('.csv', ''))
             print('\n-----------------------------------\n')
             
-            file_name = input("【 Please enter the VPN list name 】\n\n=> ")
-            filtered_csv_path = Folder_Path + file_name + ".csv"
+            selected_file_name = input("【 Please enter the VPN list name 】\n\n=> ")
+            filtered_csv_path = Folder_Path + selected_file_name + ".csv"
             while (filtered_csv_path.strip() == '') or (os.path.exists(filtered_csv_path) == False):
                 print("\n[Sorry, this path information is necessary, please input again.]")
                 print('\n-----------------------------------\n')
-                file_name = input("【 Please enter the VPN list name 】\n\n=> ")
-                filtered_csv_path = Folder_Path + file_name + ".csv"
+                selected_file_name = input("【 Please enter the VPN list name 】\n\n=> ")
+                filtered_csv_path = Folder_Path + selected_file_name + ".csv"
+            source = pd.read_csv(filtered_csv_path)
 
-            Source = pd.read_csv(filtered_csv_path)               
-            vpn_hostname, vpn_ip, vpn_country = vpnselection.select_one(Source, show_list = "y")
-            ovpn_file_content = vpnselection.decode_selected_vpn(filtered_csv_path, vpn_hostname)
-            connection.system_identify(vpn_hostname, vpn_ip, vpn_country, ovpn_file_content)
+            if Website_Name == 'vpngate':
+                WebsiteFunction.Vpngate.connection(source, filtered_csv_path)
         
         elif function_chioce == '0':
             sys.exit()

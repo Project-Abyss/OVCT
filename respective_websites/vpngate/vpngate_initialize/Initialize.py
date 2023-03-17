@@ -11,6 +11,6 @@ inifile.read(inifile_name, 'UTF-8')
 
 print("\n[ Initializing... ]")
 updated_source = Webcrawler.loadTable()
-file_path = '../../../' + inifile["file_path"]["resources"] + inifile["file_path"]["all_resources_name"]
+file_path = '../../../' + inifile["file_path"]["resources"] + inifile["file_path"]["vpngate_resources_name"]
 print(file_path)
 DataProcessing.listReload(updated_source, file_path)

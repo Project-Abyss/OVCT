@@ -1,4 +1,4 @@
-import WebCrawler
+import Webcrawler
 import configparser as cp
 import os, sys
 

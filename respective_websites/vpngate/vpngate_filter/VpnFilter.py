@@ -79,7 +79,7 @@ def askConnectionOrNot(Filtered_source, File_Path):
     connection_or_not = input("【 Do you want to connection vpn now?(Y/N) 】 \n\n=> ")
     if connection_or_not == "Y" or connection_or_not == "y":
         print('\n-----------------------------------\n')
-        vpn_hostname, vpn_ip, vpn_country = VpnSelection.selectOne(Filtered_source, show_list = "n")
+        vpn_hostname, vpn_ip, vpn_country = VpnSelection.selectOne(Filtered_source, Show_List = "n")
         ovpn_file_content = VpnSelection.decodeSelectedVpn(File_Path, vpn_hostname)
         Connection.systemIdentify(vpn_hostname, vpn_ip, vpn_country, ovpn_file_content)
     else:

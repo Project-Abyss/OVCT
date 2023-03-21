@@ -7,6 +7,9 @@ from shared_functions import WebsiteFunction
 def chooseOperation(Folder_Path, File_Name, Website_Name):
     while(True):
         file_path = Folder_Path + File_Name +'.csv'
+        while(os.path.getsize(file_path)==0): # Judge that whether the initial file is empty
+            print("The initial list is empty. Please initialize first.")
+            sys.exit()
         source = pd.read_csv(file_path)
         print("\n======================================================================\n\n【 Public VPN 10 records 】\n")
         print(source[['#HostName', 'CountryLong', 'IP', 'Speed']].head(10)) # List the first 10 rows of the PublicVPN list
